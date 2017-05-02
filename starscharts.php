@@ -555,7 +555,7 @@ function sc_process_report()
                 printf ("<a href=\"%s\">Full Report</a></td>",$reportentry_link);
             }
             printf ("</tr>");
-            printf ("<tr><td style=\"padding-top:10px\">&copy %s <a class=\"horoscopescopyrightlink\" href=\"http://www.seeingwithstars.net\">Seeingwithstars</a> & <a class=\"horoscopescopyrightlink\" href=\"http://www.myastrologycharts.com\">Myastrologycharts</a></td></tr>",date("Y"));
+            printf ("<tr><td style=\"padding-top:10px\">&copy %s <a class=\"copyrightlink\" href=\"http://www.seeingwithstars.net\">Seeingwithstars</a> & <a class=\"copyrightlink\" href=\"http://www.myastrologycharts.com\">Myastrologycharts</a></td></tr>",date("Y"));
             printf ("</table>");
             printf ("</body>");
             printf ("</html>");
