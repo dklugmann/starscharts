@@ -1,0 +1,154 @@
+body { font-family:Arial; }
+
+
+
+.entrytable { border:none; margin-left:auto; margin-right:auto;}
+.entrytable td { border: none; padding:5px}
+.entrytitle { width:40%; vertical-align:top}
+.entrystandard  { width:60%; vertical-align:top}
+.entrylong  { width:100%; vertical-align:top}
+.entryinput { width:100%; }
+.displaytable { border:none; margin-left:auto; margin-right:auto;}
+.displaytable td { border: none}
+.buttonstable { border:none; margin-left:auto; margin-right:auto; }
+.buttonstable td { border: none; padding:5px}
+.planetpointsindextable { border:0px; padding:0px; margin-left:auto; margin-right:auto; }
+.planetpointsindextable td { border: 0px; padding:5px; margin:0px; vertical-align:middle; white-space: nowrap; font-size:75% }
+.planetaspectsindextable { border:0px; padding:0px; margin-left:auto; margin-right:auto; }
+.planetaspectsindextable td { border:0px; padding:5px; margin:0px; vertical-align:middle; white-space: nowrap; font-size:75% }
+div.shiftleft {padding-left:40px}
+
+img.nomargin { margin:0px; }
+
+.headerimage {
+margin-left:auto;
+margin-right:auto;
+width:700px;
+margin-top:15px;
+}
+.headerline {
+width:700px;
+background-color:rgb(120,120,120);
+height:30px; 
+margin-top:10px;
+margin-bottom:5px;
+margin-left:auto;
+margin-right:auto;
+}
+.headertitle
+{
+padding-top:5px;
+padding-left:5px;
+color:white;
+font-weight:bold;
+font-size:15px;
+}
+.errormessage {
+color:red;
+font-weight:bold;
+}
+.persontitle {
+text-align:center; 
+padding-top:20px; 
+padding-bottom:10px;
+font-weight:bold;
+font-size:16px;
+}
+.typetitle {
+text-align:center; 
+padding-top:20px; 
+padding-bottom:10px;
+font-weight:bold;
+font-size:16px;
+}
+.contacttitle {
+text-align:center; 
+padding-top:20px; 
+padding-bottom:10px;
+font-weight:bold;
+font-size:16px;
+}
+.chapterheader {
+font-weight:bold;
+color:rgb(80,80,80);
+padding-top:30px; 
+padding-bottom:5px; 
+margin-bottom:10px; 
+border-bottom:3px solid rgb(234,234,234); 
+font-size:18px;
+}
+.subheading2 {
+font-weight:bold;
+color:rgb(80,80,80);
+}
+.subheading3 {
+font-weight:bold;
+color:rgb(80,80,80);
+}
+.subheading4 {
+font-weight:bold;
+color:rgb(80,80,80);
+}
+.boldon {
+font-weight:bold;
+color:rgb(80,80,80);
+}
+.italicon {
+font-style:italic;
+}
+.centertext {
+padding:0px;
+margin-bottom:-14px;
+text-align:center;
+}
+.title {
+color:rgb(248,127,133); 
+font-weight:bold
+}
+.topictitle {
+font-weight:bold;
+color:rgb(64,188,126);
+}
+.planetpointsindextitle {
+text-align:center;
+font-weight:bold;
+font-size:115%; 
+padding-bottom:5px;
+}
+.planetpointsindexcolheader {
+font-weight:bold;
+}
+
+.planetaspectsindextitle {
+text-align:center;
+font-weight:bold;
+font-size:115%;
+padding-bottom:5px;
+}
+
+.planetaspectsindexcolheader {
+font-weight:bold;
+}
+
+a {color : black;  text-decoration:none; outline:none;}
+select { background-color: white }
+option { background: white; font-size:14px }
+
+ul {
+list-style-type: none;
+padding:0px;
+margin:0px;
+}
+td { font-size:14px; font-family:Arial; }
+.li1 {
+margin:0px;
+border:0px;
+padding-left:8px;
+padding-right:0px;
+padding-top:2px;
+padding-bottom:2px;
+}
+img.responsive {
+max-width:100%;
+max-height:100%;
+}
