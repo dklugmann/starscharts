@@ -3,8 +3,10 @@
 Plugin Name: Stars Charts
 Plugin URI: http://starswebservice.com
 Description: Plugin to display an Astrology Chart
-Version: 2.0
+Version: 2.2
 History
+2.2
+Copyright link moved to front page
 2.1
 Planetary Points and Aspects Displayed in more concise way.
 Planetary Points and Aspects graphic replaced with table in non Wordpress version.
@@ -207,6 +209,7 @@ function sc_display_input_form()
     printf ("<tr><td colspan=2 style=\"text-align:center; padding-top:25px;\">");
     printf ("<input type=\"submit\" name=\"submitted\" value=\"Generate Chart\" onclick=\"res=sc_checkdatesok(document.getElementById('dob1'), document.getElementById('time1'),'%s', '%s'); return(res);\">",$dateinputstyle,$timedisplaystyle);
     printf ("</td></tr>");
+    printf ("<tr><td colspan=2 style=\"padding-top:30px; font-size:75%%\">&copy %s <a class=\"copyrightlink\" href=\"http://www.seeingwithstars.net\">Seeingwithstars</a> & <a class=\"copyrightlink\" href=\"http://www.myastrologycharts.com\">Myastrologycharts</a></td></tr>",date("Y"));
     printf ("</table>");
     printf ("</form>");
     printf ("</body>");
@@ -555,7 +558,6 @@ function sc_process_report()
                 printf ("<a href=\"%s\">Full Report</a></td>",$reportentry_link);
             }
             printf ("</tr>");
-            printf ("<tr><td style=\"padding-top:10px\">&copy %s <a class=\"copyrightlink\" href=\"http://www.seeingwithstars.net\">Seeingwithstars</a> & <a class=\"copyrightlink\" href=\"http://www.myastrologycharts.com\">Myastrologycharts</a></td></tr>",date("Y"));
             printf ("</table>");
             printf ("</body>");
             printf ("</html>");
