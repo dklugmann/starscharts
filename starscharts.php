@@ -3,8 +3,10 @@
 Plugin Name: Stars Charts
 Plugin URI: http://starswebservice.com
 Description: Plugin to display an Astrology Chart
-Version: 2.2
+Version: 2.3
 History
+2.3
+Email address entry added
 2.2
 Copyright link moved to front page
 2.1
@@ -88,7 +90,6 @@ function sc_display_input_form()
     if ( !isset( $_POST['submitted'] ) ) 
     {
         $email = $_SESSION['session_email'];
-
         $name1 =  $_SESSION['session_name1'];
         $dob1 = $_SESSION['session_dob1'];
         $time1 = $_SESSION['session_time1'];
@@ -207,6 +208,11 @@ function sc_display_input_form()
         printf ("</select></td></tr></select>");
     }
     printf ("<tr><td colspan=2 style=\"text-align:center; padding-top:25px;\">");
+    printf ("<tr><td colspan=2 class=\"contacttitle\">Enter Contact Details</td></tr>");
+    if ($failednoemail)
+        printf ("<tr><td colspan=2 class=\"errormessage\">*Please enter an Email Address</td></tr>");
+    printf ("<tr><td class=\"entrytitle\">Email Address</td><td class=\"entrystandard\"><input type=\"text\" class=\"entryinput\" type=text id=\"email\" name=\"email\" value=\"%s\"></input></td></tr>",$email);
+    printf ("<tr><td colspan=2 style=\"text-align:center; padding-top:25px;\">");
     printf ("<input type=\"submit\" name=\"submitted\" value=\"Generate Chart\" onclick=\"res=sc_checkdatesok(document.getElementById('dob1'), document.getElementById('time1'),'%s', '%s'); return(res);\">",$dateinputstyle,$timedisplaystyle);
     printf ("</td></tr>");
     printf ("<tr><td colspan=2 style=\"padding-top:30px; font-size:75%%\">&copy %s <a class=\"copyrightlink\" href=\"http://www.seeingwithstars.net\">Seeingwithstars</a> & <a class=\"copyrightlink\" href=\"http://www.myastrologycharts.com\">Myastrologycharts</a></td></tr>",date("Y"));
@@ -231,6 +237,7 @@ function sc_validate_page()
     global $foundmultipletown1;
     global $failedmultipletown1;
     global $foundvaguetown1;
+    global $failednoemail;
 
     $retstatus = 1;
     $dob1 = $_POST['dob1'];
@@ -240,6 +247,7 @@ function sc_validate_page()
     $town1 =  $_POST["town1"];
     $countryid1 = $_POST['countryid1'];
     $townselect1 = $_POST['townselect1'];
+    $email = $_POST['email'];
     if (isset($unknowntime1))
        $unknowntime1 = 'Y';
     else
@@ -466,6 +474,7 @@ function sc_process_report()
             $_SESSION['session_unknowntime1'] = $unknowntime1;
             $_SESSION['session_town1'] = (string) $town1;
             $_SESSION['session_countryid1'] = $countryid1;
+            $_SESSION['email'] = $email;
 
             $processstyle = 'SYNCHRONOUS';
             $reporttype = 'CHART';
@@ -478,9 +487,9 @@ function sc_process_report()
                   <user id="0" firstname="%s" lastname="" dob="%s" time="%s" unknowntime="%s"
                       latitude="%lf" longitude="%lf" country="%s" city="%s" typetable="%d" zonetable="%d"/>
                 </users>
-                <auth apiKey="%s" />
+                <auth apiKey="%s" email="%s" />
                 <pref lang="EN" houseSystem="%s" />
-              </astroRequest>',$processstyle,$reporttype,$name1,$dob1,$time1,$unknowntime1,$latitude1,$longitude1,$country1,addslashes($town1),$typetable1,$zonetable1,$apikey,$housecode);
+              </astroRequest>',$processstyle,$reporttype,$name1,$dob1,$time1,$unknowntime1,$latitude1,$longitude1,$country1,addslashes($town1),$typetable1,$zonetable1,$apikey,$email,$housecode);
 
             $url = sprintf ("%s%s?requestxml=%s",$enginepath,$enginename,urlencode($params));
             $returnxmlstring = sc_loadXML($url);
