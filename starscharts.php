@@ -431,6 +431,7 @@ function sc_process_report()
             $town1 =  $_POST["town1"];
             $countryid1 = $_POST['countryid1'];
             $townselect1 = $_POST['townselect1'];
+            $email = $_POST['email'];
             if (isset($unknowntime1))
                $unknowntime1 = 'Y';
             else
